@@ -1,0 +1,16 @@
+{
+ "Files" : [
+  {
+   "Path" : "E:/sonhaftadersi/fpga_odev2/src/Dual_path_memory.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "E:/sonhaftadersi/fpga_odev2/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

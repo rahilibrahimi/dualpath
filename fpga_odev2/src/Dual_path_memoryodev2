@@ -1,0 +1,32 @@
+module dual_port_memory (
+    input clk,
+    input rst,
+    input [4:0] a,
+    input [4:0] b,
+    input [4:0] dat_a,
+    input [4:0] dat_b,
+    input w_enable_a,
+    input w_enable_b,
+    output reg [4:0] q_a,
+    output reg [4:0] q_b
+);
+
+reg [7:0] memory [0:255];
+
+always @(posedge clk) begin
+    if (rst) begin
+        q_a <= 8'h00;
+        q_b <= 8'h00;
+    end else begin
+        if (w_enable_a) begin
+            memory[a] <= dat_a;
+        end
+        q_a <= memory[a];
+        if (w_enable_b) begin
+            memory[b] <= dat_b;
+        end
+        q_b <= memory[b];
+    end
+end
+
+endmodule
